@@ -82,7 +82,6 @@ def quicksorter(list):
     global l
     l = list
     max = quicksort_with_stacking_largest_sublist(0, len(list)-1)
-    print("Done!\n")
     return max
 
 
@@ -97,9 +96,9 @@ def quicksorter(list):
 # quicksorter([3, 2])
 # quicksorter([1, 2])
 
-# maxs = []
-# for permutation in list(np.random.permutation(100)):
-#     # print(type(list(permutation)))
-#     maxs.append(quicksorter(list(permutation)))
-#
-# print(max(maxs))
+maxs = []
+for i in range(100):
+    # print(type(list(permutation)))
+    maxs.append(quicksorter(list(np.random.permutation(20))))
+
+print(max(maxs))
